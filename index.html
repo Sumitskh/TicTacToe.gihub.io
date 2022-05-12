@@ -15,6 +15,9 @@
             <li>Tictactoe.com</li>
         </ul>
     </nav>
+    <div class="welcome">
+        <h1>Welcome to Tic Tac Toe</h1>
+    </div>
     <div class="gameContainer">
         <div class="container">
             <div class="box bt-0 bl-0"><span class="boxText"> </span></div>
@@ -28,7 +31,7 @@
             <div class="box br-0  bb-0"><span class="boxText"> </span></div>
         </div>
         <div class="gameInfo">
-            <h1>Welcome to tic tac toe</h1>
+            <h1>Game Info</h1>
             <div>
                 <span class="info">Turn for X</span>
                 <button id="reset">Reset</button>
@@ -37,7 +40,36 @@
                 <img src="images/mochi-peachcat-cute-cat.gif" alt="img">
             </div>
         </div>
+        <div class="ScoreBoard">
+            <h1>ScoreBoard</h1>
+            <div class="playerTabs">
+                <div class="xPlayer">
+                    <div class="rowDiv">
+                        <h2>X's Wins</h2>
+                        <span id="scoreX">0</span>
+                    </div>
+                    <div class="imgBox imgBox2">
+                        <img src="images/yay-hooray.gif" alt="img2">
+                        <img src="images/tears-cry.gif" alt="img2">
+                    </div>
+                </div>
+                <div class="oPlayer">
+                    <div class="rowDiv">
+                        <h2>O's Wins</h2>
+                        <div id="scoreO">0</div>
+                    </div>
+                    <div class="imgBox imgBox3">
+                        <img src="images/yay-hooray.gif" alt="img2">
+                        <img src="images/tears-cry.gif" alt="img2">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- Footer -->
+    <footer>
+        All rights reserved | TicTacToe 2022 v0.6| Sumitskh
+    </footer>
     <script src="script.js"></script>
 </body>
 

@@ -40,13 +40,63 @@ nav ul{
     background-color: rgb(245, 229, 245);
     cursor: pointer;
 }
+.welcome{
+    text-align: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
 .gameInfo{
     padding: 0 34px;
+    margin: 0 34px;
     font-family: 'Baloo Bhaina 2', cursive;
+}
+.ScoreBoard{
+    width: 80vw;
+    padding: 0 34px;
+    margin: 25px 34px;
+    border: 1px solid black;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.ScoreBoard h1{
+    text-align: center;
+}
+.playerTabs{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px ;
+}
+.xPlayer, .oPlayer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 170px;
+    border: 1px solid;
+}
+#scoreX, #scoreO{
+    font-size: 24px;
+}
+.rowDiv{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid;
 }
 .imgBox img{
     width: 0;
     transition: width 1s ease-in-out;
+}
+footer{
+    /* position: fixed; */
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+.info{
+    font-size: 1rem;
+    font-weight: bold;
 }
 .br-0{
     border-right: 0;
@@ -61,8 +111,8 @@ nav ul{
     border-bottom: 0;
 }
 #reset{
-    margin: 23px;
-    padding: 8px 12px;
+    margin: 5px 15px;
+    padding: 5px 12px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
@@ -75,5 +125,16 @@ nav ul{
     .container{
     grid-template-rows: repeat(3, 20vw);
     grid-template-columns: repeat(3, 20vw);
+    }
+    .gameInfo{
+        font-size: 0.8rem;
+        padding-top: 5px 0;
+    }
+    footer{
+        font-size: 0.9rem;
+    }
+    .ScoreBoard{
+        padding: 0 12px;
+        height: fit-content;
     }
 }
