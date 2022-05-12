@@ -111,5 +111,15 @@ reset.addEventListener('click', () => {
         document.querySelector('.imgBox2').getElementsByTagName('img')[1].style.width = '0px';
         document.querySelector('.imgBox3').getElementsByTagName('img')[0].style.width = '0px';
         document.querySelector('.imgBox3').getElementsByTagName('img')[1].style.width = '0px';
+        document.querySelector('.gameMsg').innerText = "Let's Play";
     })
+})
+// function resetAll(){
+//     document.getElementById("scoreX").innerText = 0;
+//     document.getElementById("scoreO").innerText = 0;
+// }
+// Play with Ai button
+playWithAi.addEventListener('click',()=>{
+    let gameMsgBox = document.querySelector('.gameMsg');
+    gameMsgBox.innerText = "Coming Soon";
 })

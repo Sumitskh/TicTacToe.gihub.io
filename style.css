@@ -48,6 +48,9 @@ nav ul{
     padding: 0 34px;
     margin: 0 34px;
     font-family: 'Baloo Bhaina 2', cursive;
+    border: 1px solid;
+    margin-top: 15px;
+    text-align: center;
 }
 .ScoreBoard{
     width: 80vw;
@@ -110,13 +113,17 @@ footer{
 .bb-0{
     border-bottom: 0;
 }
-#reset{
+.button{
     margin: 5px 15px;
     padding: 5px 12px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     font-family: 'Baloo Bhaina 2', cursive;
+}
+.gameMsg{
+    bottom: 0;
+    border-top: 1px solid;
 }
 
 /* Responsive */
