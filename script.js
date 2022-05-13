@@ -52,7 +52,7 @@ const checkDraw = () => {
     })
 }
 // ScoreBoard
-const updateScores = ()=>{
+const updateScores = () => {
     let xScore = parseInt(document.getElementById("scoreX").innerText);
     let oScore = parseInt(document.getElementById("scoreO").innerText);
     let winner = document.querySelector('.info').innerText;
@@ -60,17 +60,21 @@ const updateScores = ()=>{
     if (winner === "X Wons") {
         xScore++;
         document.getElementById("scoreX").innerText = xScore;
-    } else if(winner === "O Wons"){
+    } else if (winner === "O Wons") {
         oScore++;
         document.getElementById("scoreO").innerText = oScore;
     }
     if (xScore > oScore) {
-        console.log("ok");
+        // console.log("ok");
         document.querySelector('.imgBox2').getElementsByTagName('img')[0].style.width = '100px';
         document.querySelector('.imgBox3').getElementsByTagName('img')[1].style.width = '100px';
-    } else if(oScore > xScore){
+        document.querySelector('.imgBox2').getElementsByTagName('img')[1].style.width = '0px';
+        document.querySelector('.imgBox3').getElementsByTagName('img')[0].style.width = '0px';
+    } else if (oScore > xScore) {
         document.querySelector('.imgBox2').getElementsByTagName('img')[1].style.width = '100px';
         document.querySelector('.imgBox3').getElementsByTagName('img')[0].style.width = '100px';
+        document.querySelector('.imgBox2').getElementsByTagName('img')[0].style.width = '0px';
+        document.querySelector('.imgBox3').getElementsByTagName('img')[1].style.width = '0px';
     }
 }
 
@@ -92,14 +96,24 @@ Array.from(boxes).forEach(element => {
             }
             // Game over events
             if (gameover) {
-                setTimeout(function () { document.getElementById("reset").click() }, 2000);
-                gameoverAud.play().loop = true;
+                // setTimeout(function () { document.getElementById("reset").click() }, 2000);
+                setTimeout(resetBoard, 2000)
+                gameoverAud.play();
             }
         }
     })
 })
 // Add onclick listner to reset button
 reset.addEventListener('click', () => {
+    document.getElementById("scoreX").innerText = 0;
+    document.getElementById("scoreO").innerText = 0;
+    resetBoard();
+    document.querySelector('.imgBox2').getElementsByTagName('img')[0].style.width = '0px';
+    document.querySelector('.imgBox2').getElementsByTagName('img')[1].style.width = '0px';
+    document.querySelector('.imgBox3').getElementsByTagName('img')[0].style.width = '0px';
+    document.querySelector('.imgBox3').getElementsByTagName('img')[1].style.width = '0px';
+})
+function resetBoard() {
     let boxtext = document.querySelectorAll('.boxText');
     Array.from(boxtext).forEach(element => {
         element.innerText = ""
@@ -107,19 +121,11 @@ reset.addEventListener('click', () => {
         gameover = false;
         document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
         document.querySelector('.imgBox').getElementsByTagName('img')[0].style.width = '0px';
-        document.querySelector('.imgBox2').getElementsByTagName('img')[0].style.width = '0px';
-        document.querySelector('.imgBox2').getElementsByTagName('img')[1].style.width = '0px';
-        document.querySelector('.imgBox3').getElementsByTagName('img')[0].style.width = '0px';
-        document.querySelector('.imgBox3').getElementsByTagName('img')[1].style.width = '0px';
         document.querySelector('.gameMsg').innerText = "Let's Play";
     })
-})
-// function resetAll(){
-//     document.getElementById("scoreX").innerText = 0;
-//     document.getElementById("scoreO").innerText = 0;
-// }
+}
 // Play with Ai button
-playWithAi.addEventListener('click',()=>{
+playWithAi.addEventListener('click', () => {
     let gameMsgBox = document.querySelector('.gameMsg');
     gameMsgBox.innerText = "Coming Soon";
 })
