@@ -4,8 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: cornsilk;
+}
 nav{
-    background-color: black;
+    background-color: brown;
     color: white;
     height: 65px;
     font-size: 27px;
@@ -94,7 +97,7 @@ footer{
     width: 100vw;
     bottom: 0;
     text-align: center;
-    background-color: #000;
+    background-color: brown;
     color: #fff;
 }
 .info{
@@ -117,6 +120,8 @@ footer{
     margin: 5px 15px;
     padding: 5px 12px;
     border-radius: 10px;
+    background-color: brown;
+    color: white;
     cursor: pointer;
     font-size: 16px;
     font-family: 'Baloo Bhaina 2', cursive;
