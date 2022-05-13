@@ -2,6 +2,7 @@ console.log("welcome to tic tac toe");
 let musicAud = new Audio("sounds/384468__frankum__vintage-elecro-pop-loop.mp3");
 let turnAud = new Audio("sounds/270338__littlerobotsoundfactory__open-01.wav");
 let gameoverAud = new Audio("sounds/270330__littlerobotsoundfactory__jingle-achievement-01.wav");
+let btnClickAud = new Audio("sounds/270322__littlerobotsoundfactory__menu-navigate-02.wav");
 let turn = "X"
 let gameover = false;
 let winScore;
@@ -108,6 +109,7 @@ reset.addEventListener('click', () => {
     document.getElementById("scoreX").innerText = 0;
     document.getElementById("scoreO").innerText = 0;
     resetBoard();
+    btnClickAud.play();
     document.querySelector('.imgBox2').getElementsByTagName('img')[0].style.width = '0px';
     document.querySelector('.imgBox2').getElementsByTagName('img')[1].style.width = '0px';
     document.querySelector('.imgBox3').getElementsByTagName('img')[0].style.width = '0px';
@@ -127,5 +129,6 @@ function resetBoard() {
 // Play with Ai button
 playWithAi.addEventListener('click', () => {
     let gameMsgBox = document.querySelector('.gameMsg');
-    gameMsgBox.innerText = "Coming Soon";
+    btnClickAud.play();
+    gameMsgBox.innerText = "Coming Soon.....";
 })
